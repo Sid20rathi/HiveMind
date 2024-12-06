@@ -1,6 +1,5 @@
 "use client"
 
-import { Loader } from "@/components/global/loader"
 import { Button } from "@/components/ui/button"
 import { useJoinGroup } from "@/hooks/payment"
 
@@ -13,7 +12,7 @@ type JoinGroupPaymentFormProps = {
 export const JoinGroupPaymentForm = ({
   groupid,
 }: JoinGroupPaymentFormProps) => {
-  const { isPending, onPayToJoin } = useJoinGroup(groupid)
+  const {  onJoinFreeGroup } = useJoinGroup(groupid)
   return (
     <div className="flex flex-col gap-y-3">
       <CardElement
@@ -30,8 +29,8 @@ export const JoinGroupPaymentForm = ({
         }}
         className="bg-themeBlack border-[1px] border-themeGray outline-none rounded-lg p-3"
       />
-      <Button onClick={onPayToJoin}>
-        <Loader loading={isPending}>Pay Now</Loader>
+      <Button onClick={ onJoinFreeGroup}>
+        Pay Now
       </Button>
     </div>
   )
