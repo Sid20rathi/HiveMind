@@ -1,16 +1,19 @@
+"use client"
 import SignUpForm from "@/components/forms/sign-up"
 import { GoogleAuthButton } from "@/components/global/google-oauth-button"
 import { Separator } from "@/components/ui/separator"
+import { useRouter } from "next/navigation"
 
 type Props = {}
 
 const SignUpPage = (props: Props) => {
+  const router = useRouter()
   return (
     <>
-      <h5 className="font-bold text-base text-themeTextWhite">Signup</h5>
+      <h4 className="font-bold text-base text-themeTextWhite">Sign up</h4>
       <p className="text-themeTextGray leading-tight">
-        Network with people from around the world, join groups, create your own,
-        watch courses and become the best version of yourself.
+        Connect globally, join communities, create your space, and grow into the
+        best version of yourself.
       </p>
       <SignUpForm />
       <div className="my-10 w-full relative">
@@ -20,6 +23,19 @@ const SignUpPage = (props: Props) => {
         <Separator orientation="horizontal" className="bg-themeGray" />
       </div>
       <GoogleAuthButton method="signup" />
+      <div className="flex flex-row pt-8">
+        <p className="text-themeTextGray leading-tight pl-20 font-light select-none">
+          Already have an account?
+          <span
+            className="font-bold pl-1 cursor-pointer hover:text-blue-600"
+            onClick={() => {
+              router.push("/sign-in")
+            }}
+          >
+            Sign In
+          </span>{" "}
+        </p>
+      </div>
     </>
   )
 }

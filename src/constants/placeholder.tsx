@@ -1,12 +1,4 @@
-import {
-  Chat,
-  Courses,
-  Document,
-  Grid,
-  Heart,
-  MegaPhone,
-  WhiteLabel,
-} from "@/icons"
+import { Chat, Courses, Document, Grid, Heart, MegaPhone } from "@/icons"
 
 export type CreateGroupPlaceholderProps = {
   id: string
@@ -44,10 +36,5 @@ export const CREATE_GROUP_PLACEHOLDER: CreateGroupPlaceholderProps[] = [
     id: "5",
     label: "Host unlimited courses",
     icon: <Courses />,
-  },
-  {
-    id: "6",
-    label: "White-labeling options",
-    icon: <WhiteLabel />,
   },
 ]

@@ -56,11 +56,6 @@ export const useChannelInfo = () => {
         description: data.message,
       })
     },
-    onSettled: async () => {
-      return await client.invalidateQueries({
-        queryKey: ["group-channels"],
-      })
-    },
   })
   const { variables: deleteVariables, mutate: deleteMutation } = useMutation({
     mutationFn: (data: { id: string }) => onDeleteChannel(data.id),

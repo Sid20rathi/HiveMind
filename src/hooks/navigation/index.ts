@@ -32,9 +32,6 @@ export const useSideBar = (groupid: string) => {
 
   const client = useQueryClient()
 
-  //we use usemutation to optimistically add a channel
-  //once the mutation is settled or complete we invalidate the group-channel query and trigger a refetch //this makes the optimistic ui seamless
-
   const { isPending, mutate, isError, variables } = useMutation({
     mutationFn: (data: {
       id: string

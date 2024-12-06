@@ -1,9 +1,11 @@
-// import { GoogleAuthButton } from "@/components/global/google-oauth-button"
+"use client"
 import SignInForm from "@/components/forms/sign-in"
 import { GoogleAuthButton } from "@/components/global/google-oauth-button"
 import { Separator } from "@/components/ui/separator"
+import { useRouter } from "next/navigation"
 
 const SignInPage = () => {
+  const router = useRouter()
   return (
     <>
       <h5 className="font-bold text-base text-themeTextWhite">Login</h5>
@@ -19,6 +21,19 @@ const SignInPage = () => {
         <Separator orientation="horizontal" className="bg-themeGray" />
       </div>
       <GoogleAuthButton method="signin" />
+      <div className="flex flex-row pt-8">
+        <p className="text-themeTextGray leading-tight pl-28 font-light select-none">
+          New to HiveMind?
+          <span
+            className="font-bold pl-1 cursor-pointer hover:text-blue-600"
+            onClick={() => {
+              router.push("/sign-up")
+            }}
+          >
+            Sign Up
+          </span>{" "}
+        </p>
+      </div>
     </>
   )
 }

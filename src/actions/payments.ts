@@ -11,7 +11,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
 export const onGetStripeClientSecret = async () => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      currency: "usd",
+      currency: "inr",
       amount: 9900,
       automatic_payment_methods: {
         enabled: true,
@@ -30,7 +30,7 @@ export const onTransferCommission = async (destination: string) => {
   try {
     const transfer = await stripe.transfers.create({
       amount: 3960,
-      currency: "usd",
+      currency: "inr",
       destination: destination,
     })
 
@@ -84,7 +84,7 @@ export const onGetGroupSubscriptionPaymentIntent = async (groupid: string) => {
     if (price && price.price) {
       console.log("🟣", price.Group?.User.stripeId)
       const paymentIntent = await stripe.paymentIntents.create({
-        currency: "usd",
+        currency: "inr",
         amount: price.price * 100,
         automatic_payment_methods: {
           enabled: true,

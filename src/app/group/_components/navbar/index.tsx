@@ -25,6 +25,15 @@ export const Navbar = async ({ groupid, userid }: NavbarProps) => {
         className="rounded-full border-themeGray bg-black !opacity-100 px-3"
         placeholder="Search..."
       />
+      <Link href={`/explore`} className="hidden md:inline">
+        <Button
+          variant="outline"
+          className="bg-themeBlack rounded-2xl flex gap-2 border-themeGray hover:bg-themeGray"
+        >
+          <CheckBadge />
+          Explore Groups
+        </Button>
+      </Link>
       <Link href={`/group/create`} className="hidden md:inline">
         <Button
           variant="outline"

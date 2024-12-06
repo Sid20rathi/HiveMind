@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic"
 import CallToAction from "./_components/call-to-action"
 import DashboardSnippet from "./_components/dashboard-snippet"
+import Hero from "./_components/hero"
+import HeroSection from "./_components/herosection"
 
 const PricingSection = dynamic(
   () =>
@@ -17,7 +19,8 @@ export default function Home() {
         <CallToAction />
         <DashboardSnippet />
       </div>
-      <PricingSection />
+      <Hero />
+      <HeroSection />
     </main>
   )
 }
