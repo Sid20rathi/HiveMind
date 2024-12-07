@@ -11,13 +11,13 @@ const Affiliate = async ({ params }: Props) => {
   return (
     <div className="flex flex-col items-start p-5">
       <Card className="border-themeGray bg-[#1A1A1D] p-5">
-        <CardTitle className="text-3xl">Affiliate Link</CardTitle>
+        <CardTitle className="text-3xl"></CardTitle>
         <CardDescription className="text-themeTextGray">
           Create and share an invitations link
         </CardDescription>
         <div className="mt-8 flex flex-col gap-y-2">
           <div className="bg-black border-themeGray p-3 rounded-lg flex gap-x-5 items-center">
-            http://localhost:3000/about/{affiliate.group?.id}
+            http://hive-mind-chi.vercel.app/about/{affiliate.group?.id}
             <CopyButton
               content={`http://localhost:3000/about/${affiliate.group?.id}`}
             />
