@@ -12,7 +12,7 @@ type JoinGroupPaymentFormProps = {
 export const JoinGroupPaymentForm = ({
   groupid,
 }: JoinGroupPaymentFormProps) => {
-  const {  onJoinFreeGroup } = useJoinGroup(groupid)
+  const { onJoinFreeGroup } = useJoinGroup(groupid)
   return (
     <div className="flex flex-col gap-y-3">
       <CardElement
@@ -29,9 +29,7 @@ export const JoinGroupPaymentForm = ({
         }}
         className="bg-themeBlack border-[1px] border-themeGray outline-none rounded-lg p-3"
       />
-      <Button onClick={ onJoinFreeGroup}>
-        Pay Now
-      </Button>
+      <Button onClick={onJoinFreeGroup}>Pay Now</Button>
     </div>
   )
 }
