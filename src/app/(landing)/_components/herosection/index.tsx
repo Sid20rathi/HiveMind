@@ -116,7 +116,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="mt-12 pt-6 border-t w-full border-gray-800 text-center text-gray-500">
-        © 2024 Hivemind Technologies. All rights reserved.
+        © 2025 Hivemind Technologies. All rights reserved.
         <div className="mt-2 space-x-4">
           <a href="#" className="hover:text-white">
             Privacy Policy
